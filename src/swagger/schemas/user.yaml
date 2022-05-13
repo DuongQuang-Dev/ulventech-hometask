@@ -1,0 +1,32 @@
+components:
+    securitySchemes:
+        bearerAuth:
+            type: http
+            scheme: bearer
+            bearerFormat: JWT
+    schemas:
+        User:
+            type: object
+            properties:
+                id:
+                    type: string
+                    description: ID of the use
+                    example: "xxxx-xxxx-xxxx"
+                first_name:
+                    type: string
+                    description: First name of the use
+                    example: "Tuan"
+                second_name:
+                    type: string
+                    description: First name of the use
+                    example: "Tuan"
+                email:
+                    type: string
+                    description: Email of the use
+                    example: "test@email.com"
+                password:
+                    type: string
+                    description: Password of the use
+                    example: "**********"
+                data:
+                    $ref: "#/components/schemas/User"
